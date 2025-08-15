@@ -3635,3 +3635,122 @@ input, select, textarea {
 	        width: 80%;
 	    }
 	}
+
+/* 2x2 Image Grid*/
+
+	#redshiftDisplay {
+	  font-size: 1.4em;
+	  margin-bottom: 10px;
+	}
+
+	.image-grid {
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	  gap: 10px;
+	  margin-top: 20px;
+	  max-width: 700px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	.image-grid img {
+	  width: 100%;
+	  height: auto;
+	  border: 2px solid #ccc;
+	  border-radius: 8px;
+	}
+
+/* 4x1 Image Grid */
+
+	.image-grid-four-wide {
+	  display: grid;
+	  grid-template-columns: repeat(4, 1fr);
+	  gap: 10px;
+	  margin-top: 20px;
+	  max-width: 1500px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	.image-grid-four-wide img {
+	  width: 100%;
+	  height: auto;
+	  border: 2px solid #ccc;
+	  border-radius: 8px;
+	  /* aspect-ratio: 1 / 1; */
+	  /* object-fit: contain; */
+	}
+
+/* 3×1 grid on top + static image on bottom */
+	#imageGrid2 {
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  grid-template-rows: auto auto;
+	  gap: 10px;
+	  margin-top: 20px;
+	  max-width: 950px;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	#imageGrid2 img {
+	  width: 100%;
+	  height: auto;
+	  border: 2px solid #ccc;
+	  border-radius: 8px;
+	}
+
+	#imageGrid2 img.static-image {
+	  grid-column: 3 / span 1; /* make static image span all columns */
+	}
+
+/* Slider */
+
+	/* Slider styling - overlay on images */
+	#slider,
+	#slider2 {
+	  width: 60%; /* span most of the grid width */
+	  background: transparent; /* removes white background */
+	  opacity: 0.75;
+	  transition: opacity 0.3s ease;
+	  z-index: 2;
+	}
+
+	/* Hover effect for slider */
+	#slider:hover,
+	#slider2:hover {
+	  opacity: 1;
+	}
+
+	/* Optional: style the slider thumb and track for dark mode */
+	#slider::-webkit-slider-runnable-track,
+	#slider2::-webkit-slider-runnable-track {
+	  background: rgba(255, 255, 255, 0.4);
+	  height: 6px;
+	  border-radius: 3px;
+	}
+	#slider::-webkit-slider-thumb,
+	#slider2::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  appearance: none;
+	  background: white;
+	  width: 14px;
+	  height: 14px;
+	  border-radius: 50%;
+	  cursor: pointer;
+	  margin-top: -4px; /* center thumb on track */
+	}
+	#slider::-moz-range-track,
+	#slider2::-moz-range-track {
+	  background: rgba(255, 255, 255, 0.4);
+	  height: 6px;
+	  border-radius: 3px;
+	}
+	#slider::-moz-range-thumb,
+	#slider2::-moz-range-thumb {
+	  background: white;
+	  width: 25px;
+	  height: 25px;
+	  border-radius: 50%;
+	  cursor: pointer;
+	}
