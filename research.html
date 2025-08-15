@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="author" content="Ryan Hazlett">
+		<meta name="description" content="Overview of my research">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<div class="topnav">
+			<a href="index.html">Home</a>
+			<a class="active" href="#research">Research</a>
+			<a href="publications.html">Publications</a>
+			<a href="pythonTutorials.html">Python Tutorials</a>
+			<a href="#about">About Me</a>
+		</div>
+
+		<!-- Research -->
+			<section id="research" class="main style3 special">
+			<!-- Overview -->
+				<div class="container">
+					<header class="major">
+						<h1>Research</h1>
+						<p>Advisor: Prof. Eli Visbal</p>
+					</header>
+				</div>
+
+				<div class="inner" style="margin-left: 80px; margin-right: 80px;">
+					<p style="text-align: left;">My research explores the formation of the first stars and galaxies during the Epoch of Reionization (EoR), a pivotal era in cosmic history that took place roughly 400 million to 1 billion years after the Big Bang. This period marked the universe’s transition from a dark, neutral state to one in which the first luminous objects ionized the intergalactic medium, making it transparent to ultraviolet light.</p>
+                    
+					<img src="images/eor_timeline.jpg" alt="Epoch of Reionization timeline" width="90%" height="auto" style="margin-top: 5px;">
+					<figcaption style="text-align: left; margin-left: 50px; margin-right: 42px; margin-bottom: 40px; font-size: 0.875em;">History of the Universe. Schematic diagram of the major milestones in the evolution of the Universe since the Big Bang, about 13.8 billion years ago. Stages shown include 'Recombination', 'The Dark Ages', the formation of the first astronomical objects, and the formation of the galaxies (right), up to the present day (far right). The yellow labels show the change from fully ionized to neutral (400 thousand years after the Big Bang). Light from the first generation of stars started to ionize the hydrogen in the period of reionization. After several hundred million years, the gas in the Universe was fully ionized. Image Credit: NAOJ.</figcaption>
+
+					<p style="text-align: left;">The very first stars, known as Population III stars, formed out of pristine hydrogen and helium gas, almost entirely free of heavier elements. These stars are thought to have been massive, short-lived, and incredibly hot, playing a central role in enriching the universe with the first heavy elements and influencing the formation of later generations of stars and galaxies. Understanding how they formed is essential for tracing the origins of cosmic structure.</p>
+
+					<p style="text-align: left;">Several key processes governed the birth of the first stars. Lyman–Werner feedback, ultraviolet radiation that dissociates  molecular hydrogen, could suppress star formation in small halos by preventing gas from cooling efficiently. The baryon–dark matter streaming velocity, a relic of conditions at recombination, created a velocity offset between normal matter and dark matter, delaying the collapse of gas into halos. Additionally, external metal enrichment from nearby supernovae could seed pristine halos with heavy elements, altering the cooling physics and triggering an earlier transition from Population III to metal-enriched Population II star formation.</p>
+
+
+					<p style="text-align: left;">To model these processes in detail, we rely on <strong>cosmological hydrodynamical simulations</strong>, which capture the complex interplay between gravity, hydrodynamics, and radiative feedback. These simulations provide deep physical insight but are computationally expensive, limiting their ability to reach the lower, observable redshifts accessible by current and upcoming telescopes.</p>
+
+					<div id="redshiftDisplay">Time since Big Bang = -- Myr  |  z = --</div>
+					<div class="grid-container">
+						<input type="range" id="slider" min="0" max="0" value="0"/>
+						<div class="image-grid" id="imageGrid"></div>
+					</div>
+					<figcaption style="text-align: left; margin-left: 200px; margin-right: 180px; margin-top: 10px; margin-bottom: 40px; font-size: 0.875em;">Results from the <i><a href="https://rensimlab.github.io/"target="_blank">Renaissance Simulations</a></i>, a suite of physics-rich adaptive mesh refinement calculations of high-redshift galaxy formation during the Epoch of Reionization simulating ~3000 early-galaxies with around 7000 Pop III stars. Each panel is a projection of a region one comoving Mpc on a side centered on the most massive halo in <i>Renaissance</i>. The top-left panel is the gas density, the top-right is the ionized hydrogen fraction, the bottom-left is the metallicity relative to solar, and the bottom-right is the gas temperature.</figcaption>
+
+					<div id="redshiftDisplay2" style="font-size: 1.4em;">Time since Big Bang = -- Myr  |  z = --</div>
+					<div class="grid-container">
+						<input type="range" id="slider2" min="0" max="0" value="0"/>
+						<div class="image-grid" id="imageGrid2"></div>
+					</div>
+					<figcaption style="text-align: left; margin-left: 200px; margin-right: 180px; margin-top: 10px; margin-bottom: 40px; font-size: 0.875em;">Additional results from <i><a href="https://rensimlab.github.io/"target="_blank">Renaissance</a></i> showing different aspects of the simulations. Each top-row panel focuses on a small region surronding the most massive halo in <i>Renaissance</i>. The top-left panel shows the gas density, which uses the adaptive mesh refinement (AMR) simulation code <i><a href="https://enzo-project.org/"target="_blank">ENZO</a></i> for hydrodynamic astrophysical calculations. As time progresses, the mesh is increasingly refined as the gravitationally collapsing gas becomes more dense. The white circle is the halo virial radius. The top-middle panel shows discrete dark matter particles that interact gravitationally with the gas, potentially triggering AMR refinement. Dark matter forms a hierarchical network of halos and subhalos, the fundamental building blocks where galaxies can form. So, to prepare the cloud of dark matter particles for further scientifc analysis, a halo finder like <i><a href="https://ui.adsabs.harvard.edu/abs/2013ApJ...762..109B/"target="_blank">ROCKSTAR</a></i> can be used to identify gravitationally bound structures and produce a halo catalog. The top-right panel shows individual halos merging together over time represented by spheres extending to the virial radius of each halo. The red sphere is the most massive halo in <i>Renaissance</i>. Finally, simulations produce snapshots at discrete times. Halos evolve between snapshots - they can grow, merge, be disrupted, or become subhalos. To understand how structures evolve and link halos between snapshots, we use an algorithm like <i><a href="https://ui.adsabs.harvard.edu/abs/2013ApJ...763...18B/"target="_blank">CONSISTENT TREES</a></i> to generate a merger tree. The bottom panel shows the merger tree for the red most massive halo show in the top-right panel. In the tree, each node is a halo at a given time, and each branch is its progenitors or descendants.</figcaption>
+
+					<p style="text-align: left;">This is where <strong>semi-analytic models</strong> become essential. By calibrating these faster, flexible models to high-resolution hydrodynamical simulations, we can explore a wide range of star formation prescriptions and feedback scenarios at a fraction of the computational cost. This approach bridges the gap between physically detailed simulations and observational predictions, enabling us to connect theory with data from next-generation facilities such as the <i>James Webb Space Telescope</i> and the upcoming <i>Nancy Grace Roman Space Telescope</i>.</p>
+
+				</div>
+
+            <!-- First Paper -->
+				<div class="container" style="margin-top: 200px;">
+					<header class="major">
+						<h3>A Framework to Calibrate a Semianalytic Model of the First Stars and Galaxies to the Renaissance Simulations</h3>
+					</header>
+				</div>
+
+				<div class="inner" style="margin-left: 80px; margin-right: 80px;">
+					<p style="text-align: left;">In this work, we developed a semi-analytic model calibrated to the <i>Renaissance Simulations</i> to study the formation of the first stars and galaxies. Our model captures both Population III (Pop III) and metal-enriched star formation, including a stochastic two-stage process for metal-enriched stars, and implements delays between Pop III supernovae and the onset of subsequent star formation.</p>
+
+					<img src="images/calibration_overview.jpg" alt="Metal-enriched SFHs for a single Renaissance halo." width="35%" height="auto" style="margin-top: 5px;">
+					<figcaption style="text-align: left; margin-left: 200px; margin-right: 180px; margin-bottom: 40px; font-size: 0.875em;">Metal-enriched star formation histories for a single <i>Renaissance</i> halo. M<sub>★</sub> is the total mass of metal-enriched stars formed in the halo. This halo experiences two episodes of bursty star formation followed by a stage of steady star formation once the halo reaches a virial temperature threshold. The burst stellar mass, quiescent period, ionization feedback threshold temperature, and steady star formation efficiency are labeled M<sub>burst</sub>, t<sub>quies</sub>, T<sub>vir,steady</sub>, and f<sub>II</sub>, respectively. Bursty and steady stages are found throughout the sample of halos we analyzed.</figcaption>
+
+					<p style="text-align: left;">We mainly focus on calibrating our model to metal-enriched star formation because <i>Renaissance</i> poorly resolves the minihalos that host Pop III star formation. Therefore, our calibration to Pop III in <i>Renaissance</i> provides little physical insight applicable to other work. For metal-enriched star formation, the two-stage prescription reproduces the overall star formation histories of individual halos and the global star formation rate densities within a factor of ~2 for the average density Normal region. Applying the model to rarer overdense or underdense regions shows modest deviations, suggesting that environmental effects not currently included, such as external enrichment, could further impact early star formation.</p>
+
+					<img src="images/semi_sfrd.jpg" alt="Cosmic SFRDs for both metal-enriched Pop III compared to Renaissance" width="55%" height="auto" style="margin-top: 5px;">
+					<figcaption style="text-align: left; margin-left: 200px; margin-right: 180px; margin-bottom: 40px; font-size: 0.875em;">Cosmic star formation rate densities (SFRDs) for both metal-enriched (orange lines, top row) Pop III (blue lines, bottom row) compared to <i>Renaissance</i> (black lines). Results for the Normal, Void, and RarePeak volumes are shown in the left-hand, middle, and right-hand columns, respectively. Overall, our model produces metal-enriched SFRDs typically within a factor of ~2 of <i>Renaissance</i> for a variety of environments.</figcaption>
+
+					<p style="text-align: left;">Overall, our calibrated semi-analytic framework efficiently reproduces the key statistical properties of early star formation and can be used to explore a wider range of scenarios than is feasible with fully numerical simulations, while also providing a platform for future studies of environmental effects, feedback, and observational predictions.</p>
+
+					<p style="text-align: left;">Please see my paper linked below:</p>
+
+					<!-- Publication Item -->
+				    <div class="publication">
+				        <div class="pub-image">
+				            <a href="images/pub/Hazlett2025a.jpg" target="_blank">
+				                <img src="images/pub/Hazlett2025a.jpg" alt="Publication Preview">
+				            </a>
+				        </div>
+				        <div class="pub-details">
+				            <h3 class="pub-title">A Framework to Calibrate a Semianalytic Model of the First Stars and Galaxies to the Renaissance Simulations</h3>
+				            <p class="pub-authors"><strong>Hazlett, R.</strong>, Kulkarni, M., Visbal, E. & Wise, J. H.</p>
+				            <p class="pub-journal">ApJ,  Jan 2025</p>
+				            <div class="pub-links">
+				                <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...978...13H" class="btn" target="_blank">ADS</a>
+				                <a href="assets/pdf/Hazlett_2025_ApJ_978_13.pdf" class="btn" target="_blank">PDF</a>
+				                <a href="https://doi.org/10.3847/1538-4357/ad919e" class="btn" target="_blank">DOI</a>
+				                <a href="https://arxiv.org/abs/2403.05624" class="btn" target="_blank">arXiv</a>
+				            </div>
+				        </div>
+				    </div>
+
+				</div>
+
+			</section>
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="mailto:ryan.hazlett@rockets.utoledo.edu" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://orcid.org/0000-0002-1034-7986" class="icon brands fa-orcid"><span class="label">ORCiD</span></a></li>
+					<li><a href="https://github.com/rshazlett" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; 2025 Ryan Hazlett</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Last updated: August 11, 2025</li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/plot_script.js"></script>
+
+	</body>
+</html>
